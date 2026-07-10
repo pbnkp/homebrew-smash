@@ -2,8 +2,8 @@ class Smash < Formula
   desc "Unified encode/decode payload manager with AI semantic compression"
   homepage "https://github.com/pbnkp/smash"
   url "https://raw.githubusercontent.com/pbnkp/smash/main/smash"
-  sha256 "7f89a3ce6b30a0a3e91530d1d38d1442fc711988fc352e06953a6ddb8811b800"
-  version "4.5"
+  sha256 "98089bdd62d60500b36915d056728f2f6571d21c9fa4a53d731b5a0a1d10af90"
+  version "5.0"
   license "MIT"
 
   depends_on "xz"
@@ -13,6 +13,6 @@ class Smash < Formula
   end
 
   test do
-    assert_match "smash v4.5", shell_output("#{bin}/smash --help 2>&1", 2)
+    assert_match "smash v5.0", shell_output("#{bin}/smash --help 2>&1", 2)
   end
 end
