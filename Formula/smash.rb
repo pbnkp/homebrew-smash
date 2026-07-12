@@ -2,7 +2,7 @@ class Smash < Formula
   desc "Unified encode/decode payload manager with AI semantic compression"
   homepage "https://github.com/pbnkp/smash"
   url "https://raw.githubusercontent.com/pbnkp/smash/main/smash"
-  sha256 "98089bdd62d60500b36915d056728f2f6571d21c9fa4a53d731b5a0a1d10af90"
+  sha256 "19ceaf85ccbf4cec5af8beb41e983a2bb2047dad000277bbf0079e9a7d66fc51"
   version "5.0"
   license "MIT"
 
