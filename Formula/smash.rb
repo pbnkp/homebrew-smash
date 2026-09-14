@@ -1,22 +1,22 @@
 class Smash < Formula
   desc "Unified encode/decode payload manager with verified-candidate compression"
   homepage "https://github.com/pbnkp/smash"
-  url "https://raw.githubusercontent.com/pbnkp/smash/6.0/smash"
-  sha256 "0898ab8bb416e9512b6bd0821e36f332b6a4f19d654c6b74db9e23379c47beb4"
-  version "6.0"
+  url "https://raw.githubusercontent.com/pbnkp/smash/6.1/smash"
+  sha256 "02ac94ac564a7e807763b1777782b3904c555a7e45f71aa039e52ae9d9a378a5"
+  version "6.1"
   license "MIT"
 
   # Hard requirements: smash dies at startup without these.
   depends_on "xz"
   depends_on "openssl@3"
 
-  # The v6.0 superposition engine builds a candidate chain per codec and ships
+  # The superposition engine builds a candidate chain per codec and ships
   # the smallest one that survives a byte-exact round-trip. Each of these adds
   # candidates; without them the engine still works, it just has fewer options
   # and produces larger artifacts.
   depends_on "brotli"
   depends_on "zstd"
-  depends_on "python@3.13"   # base85 alphabet + the tsv1 columnar transform
+  depends_on "python@3.13"   # base85 alphabet, the tsv1 transform, exact token counts
 
   # Optional, feature-gated at runtime:
   #   jpeg-xl  -> lossless JPEG transcode candidate (cjxl/djxl)
@@ -29,7 +29,7 @@ class Smash < Formula
   end
 
   test do
-    assert_match "smash v6.0", shell_output("#{bin}/smash --help 2>&1", 2)
+    assert_match "smash v6.1", shell_output("#{bin}/smash --help 2>&1", 2)
 
     # Round-trip proof: encode, decode, and require byte-identical output.
     (testpath/"probe.txt").write("smash formula round-trip probe\n" * 64)
