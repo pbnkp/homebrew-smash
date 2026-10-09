@@ -1,9 +1,9 @@
 class Smash < Formula
   desc "Unified encode/decode payload manager with verified-candidate compression"
   homepage "https://github.com/pbnkp/smash"
-  url "https://raw.githubusercontent.com/pbnkp/smash/6.1/smash"
-  sha256 "02ac94ac564a7e807763b1777782b3904c555a7e45f71aa039e52ae9d9a378a5"
-  version "6.1"
+  url "https://raw.githubusercontent.com/pbnkp/smash/6.1.1/smash"
+  sha256 "6d9ae53e3d2bbf1206128d47167ea3ff48c8e62a65b5013b5f974f277f7e33b5"
+  version "6.1.1"
   license "MIT"
 
   # Hard requirements: smash dies at startup without these.
